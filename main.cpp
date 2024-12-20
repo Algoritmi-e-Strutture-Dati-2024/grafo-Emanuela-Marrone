@@ -65,6 +65,14 @@ int main() {
     std::cout<<">Il nodo SALERNO è connesso al nodo BENEVENTO "<<std::endl;
     else
     std::cout<<"Il nodo SALERNO non è connesso al nodo BENEVENTO"<<std::endl;
-   
+
+        // Trova l'arco con peso minore per un nodo
+    int arcoMinimo = grafo.arcoConPesoMinore(BENEVENTO);
+    if (arcoMinimo != -1) {
+        std::cout << "L'arco con il peso minimo da BENEVENTO ha peso: " << arcoMinimo << std::endl;
+    } else {
+        std::cout << "Non ci sono archi uscenti da BENEVENTO." << std::endl;
+    }
+
     return 0;
 }
